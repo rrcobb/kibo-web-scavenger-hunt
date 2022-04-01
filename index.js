@@ -11,6 +11,8 @@ startbutton.addEventListener('click', function () {
       checkAnswer()
     }
   })
+  let check = checker.querySelector("button");
+  check.addEventListener("click", checkAnswer);
   input.focus()
 })
 
