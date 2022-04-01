@@ -1,35 +1,99 @@
 <html>
   <head>
-    <title>Kibo Scavenger Hunt</title>
+    <title>
+      Kibo Scavenger Hunt |
+      The secret is: "you must build"
+    </title>
     <!-- todo: favicon, meta viewport, og/share -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css -->
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- todo: instructions -->
-    <div>
-      <label for="answer">Answer: </label>
-      <input type="text" id="answer"></input>
+    <!-- TODO: maybe logo? -->
+    <h1>Kibo Web Foundations Scavenger Hunt</h1>
+
+    <div class="instructions">
+      <h3>Instructions</h3>
+      <div><p>This page has hidden messages. Follow the clues to put the pieces
+        together. For each prompt:</p>
+        <ol>
+          <li>Read the clue and figure out the answer.</li>
+          <li>Type the answer in the box.</li>
+          <li>Click "Check" to check your answer and get the next prompt.</li>
+        </ol>
+        <p>You can check as many times as you want. It will tell you whether you got it right or wrong.</p>
+        <p>After you solve all the challenges, you'll uncover the <strong>final answer.</strong></p>
+        <p>Take that back to the other page and enter it in the form to continue</p>
+      </div>
     </div>
 
-    <!-- 
+    <div class="start">
+      <button>Okay, start!</button>
+    </div>
 
-      - basic: type some text that's visible on the page
-      - find the title of the page
-      - find an html attribute
-      - find a css property (what color is the circle? 'red')
-      - what color is _this_ rectangle? Not a named color like 'red', a hex value
-      like #101101
-      - find a message hidden under an html element
-      - can use the inspector
-      - or can move the element out of the way / delete the element hiding the
-      message
-      - position some element at a particular location to see a particular message
-      - some text that's in a given spot (offscreen) position absolutely to make
-      it 'reveal' the full message
-      - use `btoa()` in the console to reveal a hidden message
-      - or some other javascript?
+    <div class="prompt --1">
+      <p>1. The first secret message is: <strong
+                                             class="secret">Climb Kibo</strong>. Type it into the box below.</p>
+      <p><small>This one's pretty easy. It's supposed to get you warmed up for
+        solving the next few challenges.</small></p>
+    </div>
 
-    -->
+    <div class="prompt --2">
+      2. To find the second secret message, you'll need to use the <strong>developer tools</strong> to find the title of the page. Open the developer tools by right clicking anywhere on the page and
+      selecting 'inspect' from the menu. You should see a panel open at the bottom or side of the page. In the Elements tab of the panel, click to
+      open the <em>head</em> tag, and look for the <em>title</em> tag. There, you'll find the secret.
+    </div>
+
+    <div class="prompt --3">
+      <!-- find an html element -->
+      3. The third secret is the name of <strong>this HTML element</strong>. Use
+      the developer tools again to find the tag's name. 
+    </div>
+
+    <div class="prompt --4">
+      <!-- find an html attribute -->
+      4. The fourth secret is the <em>value</em> of an input element hidden inside this
+      very prompt. Find an <em>input</em> element in this prompt, and look for
+      the <em>value</em> attribute.
+      <input type="hidden" value="foundations" />
+    </div>
+
+    <div class="prompt --5">
+      <!-- find a CSS property -->
+      5. The fifth secret will be in the Styles tab. First,
+      select the <em>h1</em> element - it's the heading of the page. The <em>Styles</em> section of the developer tools panel shows the CSS properties and values for this element.
+      The secret is the value for the <em>content</em> property for the <em>h1</em>. 
+    </div>
+
+    <div class="prompt --6">
+      <!-- find a message hidden offscreen -->
+      6. To find the last value, you'll have to make a change to the page using
+      the developer tools. There's an image that's positioned off screen. Click
+      on that element in the Elements tab to select it. In the Styles tab,
+      change the value for the 'left' property to move the element
+      so that it's visible. 
+      <p></p>
+      On the image, you'll see the last secret message.
+    </div>
+
+    <div class="checker">
+      <label for="secret">Secret: </label>
+      <input type="text" id="secret"></input>
+      <button class="check">Check</button>
+    </div>
+    <div class="results">
+    </div>
+
+    <img src="kibo-scavenger-hunt.svg" />
+
+    <div class="victory">
+      <h3>Congratulations!</h3>
+      You did it. Here's the message all together:
+      <div class="message"></div>
+      We hope you had fun solving the mystery!
+    </div>
 
     <script src="index.js"></script>
   </body>

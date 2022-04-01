@@ -1,11 +1,21 @@
 # Kibo Web Scavenger Hunt
 
-Mostly: using the chrome inspector + dev console to find some secret messages
+Using the chrome inspector + dev console to find some secret messages
 
 - Enter the hidden message into an input to reveal the next prompt
 - Follow all the prompts / find the password to gain entry into the course
 
-Brainstorm:
+## Secret Message
+
+Final result:
+- Kibo
+- You must build
+- strong
+- foundations
+- to reach
+- the peak
+
+## Brainstorm
 - basic: type some text that's visible on the page
 - find the title of the page
 - find an html attribute
@@ -23,3 +33,4 @@ Brainstorm:
     - or some other javascript?
 
 Some can be basic / then there's a secret 'advanced' mode
+

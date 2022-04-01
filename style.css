@@ -1,0 +1,71 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after { box-sizing: border-box; } * { margin: 0; } html, body { height: 100%; } body { line-height: 1.5; -webkit-font-smoothing: antialiased; } img, picture, video, canvas, svg { display: block; max-width: 100%; } input, button, textarea, select { font: inherit; } p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; } #root, #__next { isolation: isolate; }
+
+/*
+  Our CSS
+ */
+
+/* variables */
+:root {
+  --spacing: 24px;
+}
+
+body {
+  margin: auto;
+  padding: 0.5em;
+  max-width: 600px;
+}
+
+h1 {
+  content: "to reach";
+  margin: var(--spacing) 0;
+}
+
+.instructions {
+  margin: var(--spacing);
+}
+
+.start {
+  display: flex;
+  justify-content: center;
+}
+
+.checker {
+  margin: var(--spacing) 0 0 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.results {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing);
+}
+
+.checker > * {
+  margin: 4px;
+}
+
+.prompt {
+  margin: 0 0 var(--spacing) 0;
+  display: none;
+}
+
+img {
+  position: relative;
+  left: -100vw;
+  height: 200px;
+}
+
+.victory {
+  display: none;
+  margin: var(--spacing);
+}
+
+.message {
+  margin: var(--spacing);
+}
