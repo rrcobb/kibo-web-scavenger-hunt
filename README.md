@@ -5,32 +5,53 @@ Using the chrome inspector + dev console to find some secret messages
 - Enter the hidden message into an input to reveal the next prompt
 - Follow all the prompts / find the password to gain entry into the course
 
+## Feedback / TODO
+
+specific challenge feedback:
+
+1. kinda boring, did not learn anything
+2. weird language because it describes the devtools, instead move that
+   description to the intro
+3. needs the context of what an HTML element is
+4. "inside this very prompt" is not quite clear enough
+5. too hard, it's unclear how to select an element, where the h1 is,
+    and what the Styles tab is
+6. not clear what to change it to
+
+Maybe opening the developer tools in the intro, and then the first one is
+different, ALL use the developer tools
+    - maybe change the name to "Developer Tools Scavenger Hunt"
+    - and make them all use the Tools
+
+- The motivation / context is weak
+    - Intro could say what you'll learn from the scavenger hunt
+    - explain why you're here
+    - it's to learn to use the developer tools to inspect and change things on
+        a webpage
+
+- feeling stuck feels bad
+    - add 'I'm stuck, give me a hint' button
+    - words of encouragement / congrats on guessing right
+    - Keep going, the next one is tricky
+    - Also - connect to the conceptual ideas in the success messages
+        - Text Nodes
+        - HTML elements and tags
+        - HTML attributes
+        - CSS properties and values
+        - Changing CSS values
+        - (some js thing? the console?)
+
+- congrats at the end should scroll into view
+- additional challenges:
+    - maybe: change the bg color of the page and making the background color -
+    - TODO Make this number 5, shift the previous ones earlier, but leave number 6 in place
+
 ## Secret Message
 
 Final result:
-- Kibo
+- climb kibo
 - You must build
 - strong
 - foundations
 - to reach
 - the peak
-
-## Brainstorm
-- basic: type some text that's visible on the page
-- find the title of the page
-- find an html attribute
-- find a css property (what color is the circle? 'red')
-  - what color is _this_ rectangle? Not a named color like 'red', a hex value
-      like #101101
-- find a message hidden under an html element
-    - can use the inspector
-    - or can move the element out of the way / delete the element hiding the
-        message
-- position some element at a particular location to see a particular message
-      - some text that's in a given spot (offscreen) position absolutely to make
-          it 'reveal' the full message
-- use `btoa()` in the console to reveal a hidden message
-    - or some other javascript?
-
-Some can be basic / then there's a secret 'advanced' mode
-
