@@ -7,7 +7,7 @@
     </title>
     <!-- todo: , meta og/share -->
     <meta name="description" content="DevTools Scavenger Hunt | Use the built-in
-    browser devtools to find secret messages hidden on the page." />
+                browser devtools to find secret messages hidden on the page." />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- font -->
@@ -59,30 +59,35 @@
           property and change it! You can change the color of the text, or the
           font size, or the background color, or any other CSS property.</p>
 
+          <p><strong>Tip</strong>: You can drag the panels to resize them.
+          There's also a ton more panels that you can look at if you want to
+          explore (check out what happens when you open the Network panel, then
+          reload the page!)</p>
+
           <a id="show-instructions" href="#">Got it. What's next?</a>
         </div>
       </div>
+    </div>
 
-      <div class="instructions">
-        <h2>Instructions</h2>
-        <p>
-        You'll use the Elements panel to find HTML elements and inspect their 
-        attributes. You'll use the Styles panel to see
-        CSS properties. By the end of the challenge, you'll make changes to the
-        styles of the page in order to reveal the most deeply hidden messages.
-        </p>
+    <div class="instructions">
+      <h2>Instructions</h2>
+      <p>
+      You'll use the Elements panel to find HTML elements and inspect their 
+      attributes. You'll use the Styles panel to see
+      CSS properties. By the end of the challenge, you'll make changes to the
+      styles of the page in order to reveal the most deeply hidden messages.
+      </p>
 
-        <p>Click the button below to get started. For each prompt:</p>
-        <ol>
-          <li>Read the clue and use the DevTools to find the answer.</li>
-          <li>Type the answer in the box.</li>
-          <li>Click "Check" to check your answer and get the next prompt.</li>
-        </ol>
-        <p>You can check as many times as you want. You'll get feedback on whether your answer was right or wrong.</p>
-        <p>After you solve all the challenges, you'll uncover the <strong>final answer.</strong></p>
-        <div class="start">
-          <button>Okay, let's start!</button>
-        </div>
+      <p>Click the button below to get started. For each prompt:</p>
+      <ol>
+        <li>Read the clue and use the DevTools to find the answer.</li>
+        <li>Type the answer in the box.</li>
+        <li>Click "Check" to check your answer and get the next prompt.</li>
+      </ol>
+      <p>You can check as many times as you want. You'll get feedback on whether your answer was right or wrong.</p>
+      <p>After you solve all the challenges, you'll uncover the <strong>final answer.</strong></p>
+      <div class="start">
+        <button>Okay, let's start!</button>
       </div>
     </div>
 
@@ -112,30 +117,37 @@
     <div class="prompt --4">
       <!-- find an html attribute -->
       4. The fourth secret is the <strong>value</strong> of an input element hidden inside this
-      very prompt. Find an <strong>input</strong> element in this prompt, and look for
-      the <strong>value</strong> attribute.
+      very prompt. Click to inspect an element in this paragraph, open up the
+      elements and look nearby for an <strong>input</strong> element. 
+      The <strong>value</strong> attribute of the input element is the fourth secret.
       <input type="hidden" value="foundations" />
     </div>
 
     <div class="prompt --5">
       <!-- find a CSS property -->
-      5. The fifth secret will be in the Styles panel. First,
-      select the <strong>h1</strong> element - it's the heading of the page. The
-      <strong>Styles</strong> section of the developer tools panel shows the CSS properties and values for this element.
-      The secret is the value for the <strong>content</strong> property for the
-      <strong>h1</strong>. 
+      5. The fifth secret is hidden in the Styles panel. First,
+      select the <strong>h1</strong> element - it's the heading of the page, at
+      the top of the &lt;body&gt;, and inside it says 'DevTools Scavenger Hunt'.
+      Click that element in the Elements panel so that the
+      <strong>Styles</strong> panel shows all the CSS properties and values.
+      The secret is in the <strong>content</strong> property. 
     </div>
 
     <div class="prompt --6">
       <!-- find a message hidden offscreen -->
-      6. To find the last value, you'll have to make a change to the page using
-      the developer tools. There's an image that's positioned off screen. Click
-      on that element in the Elements tab to select it. In the Styles tab,
-      change the value for the 'left' property to move the element
-      so that it's visible. 
-      <p></p>
-      On the image, you'll see the last secret message.
+      6. To find the last value, you'll have to change a style using
+      the developer tools. There's an image hidden off screen that has the
+      secret. <p>Find the <strong>&lt;img&gt;</strong> tag by looking near this
+      prompt in the Elements panel.
+      Click on the <strong>&lt;img&gt;</strong> in the Elements tab to select it. </p>
+
+      <p> In the Styles tab, change the value for the 'left' property to move
+      the element onto the screen. You can try different values, there's lots of
+      ones that will work.
+      </p>
+      <img class="offscreen" src="kibo-scavenger-hunt.svg" alt="image showing a mountain and the text 'the peak'"/>
     </div>
+
 
     <div class="checker">
       <label for="secret">Secret: </label>
@@ -145,13 +157,14 @@
     <div class="results">
     </div>
 
-    <img class="offscreen" src="kibo-scavenger-hunt.svg" alt="image showing a mountain and the text 'the peak'"/>
-
     <div class="victory">
       <h3>Congratulations!</h3>
       You did it. Here's the message all together:
       <div class="message"></div>
       We hope you had fun solving the mystery!
+    </div>
+
+    <div class="spacer">
     </div>
 
     <script src="script.js"></script>

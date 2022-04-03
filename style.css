@@ -52,7 +52,7 @@ p {
 }
 
 h1 {
-  content: "to reach";
+  content: "the secret is 'to reach'";
   margin: var(--spacing) 0;
   font-family: var(--font-h1);
 }
@@ -77,10 +77,15 @@ h1 {
   display: flex;
   justify-content: center;
   margin-bottom: var(--spacing);
+  height: 4em;
 }
 
 .checker > * {
   margin: 4px;
+}
+
+.spacer {
+  height: 4em;
 }
 
 .tour,
