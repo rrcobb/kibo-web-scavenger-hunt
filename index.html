@@ -39,13 +39,10 @@
         together.</p>
         <p>You'll need to use the <strong>developer tools</strong> to find each
         message.</p>
-        <p>
-        Open the developer tools by right clicking anywhere on the page and selecting 'inspect' from the menu. You should see a panel open at the bottom or side of the page.</p>
-        <p>When you have the Developer Tools open, you'll see a ton of buttons
-        and information.</p>
+        <p> Open the developer tools by right clicking anywhere on the page and selecting 'inspect' from the menu. You should see a panel open at the bottom or side of the page.</p>
         <p>
         <a href="#" id="start-tour">
-          The DevTools are open, let's take a tour.</a>
+          Great! You got the DevTools open, now let's take a tour.</a>
 
         <div class="tour">
           <p>The <strong>Elements panel</strong> shows the HTML elements that make
@@ -158,5 +155,19 @@
     </div>
 
     <script src="script.js"></script>
+    <script type="module">
+      import devtools from './devtools-detect.js';
+
+      // Get notified when devtools opened/closed or orientation changes
+      window.addEventListener('devtoolschange', event => {
+        if (event.detail.isOpen) {
+          // start the tour!
+          document.querySelector("#start-tour").style.display = "inline-block";
+        }
+
+        console.log('Is DevTools open:', event.detail.isOpen);
+        console.log('DevTools orientation:', event.detail.orientation);
+      });
+    </script>
   </body>
 </html>

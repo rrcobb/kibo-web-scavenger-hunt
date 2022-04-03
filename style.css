@@ -84,7 +84,8 @@ h1 {
 }
 
 .tour,
-.instructions {
+.instructions,
+#start-tour {
   display: none;
 }
 
