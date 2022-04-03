@@ -2,21 +2,21 @@
 <html>
   <head>
     <title>
-      Kibo Scavenger Hunt |
+      DevTools Scavenger Hunt |
       The secret is: "you must build"
     </title>
     <!-- todo: favicon, meta viewport, og/share -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- font -->
-    <link href="https://free.bboxtype.com/embedfonts/?family=FiraMono:400,700" rel="stylesheet">
+    <link rel="preload" as="font" href="fonts/FiraMono-Regular.woff2" type="font/woff2">
+    <link rel="preload" as="font" href="fonts/FiraMono-Bold.woff2" type="font/woff2">
     <!-- css -->
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- TODO: maybe logo? -->
-    <h1>Web Foundations Scavenger Hunt</h1>
-
+    <!-- This is the h1! Click it in the Element panel -->
+    <h1>DevTools Scavenger Hunt</h1>
     <div class="instructions">
       <h3>Instructions</h3>
       <div><p>This page contains hidden messages. Follow the clues to put the pieces
@@ -47,30 +47,32 @@
     <div class="prompt --2">
       2. To find the second secret message, you'll need to use the <strong>developer tools</strong> to find the title of the page. Open the developer tools by right clicking anywhere on the page and
       selecting 'inspect' from the menu. You should see a panel open at the bottom or side of the page. In the Elements tab of the panel, click to
-      open the <em>head</em> tag, and look for the <em>title</em> tag. There, you'll find the secret.
+      open the <strong>head</strong> tag, and look for the <strong>title</strong> tag. There, you'll find the secret.
     </div>
 
     <div class="prompt --3">
       <!-- find an html element -->
       3. The third secret is the name of <strong>this HTML element</strong>.
       Right click on the bold text and click 'inspect'. The text 'this HTML
-      element' is inside of a <em>tag</em>. The tag has angle brackets (&lt; and
+      element' is inside of a <strong>tag</strong>. The tag has angle brackets (&lt; and
       &gt;) and a name. That name is the third secret.
     </div>
 
     <div class="prompt --4">
       <!-- find an html attribute -->
-      4. The fourth secret is the <em>value</em> of an input element hidden inside this
-      very prompt. Find an <em>input</em> element in this prompt, and look for
-      the <em>value</em> attribute.
+      4. The fourth secret is the <strong>value</strong> of an input element hidden inside this
+      very prompt. Find an <strong>input</strong> element in this prompt, and look for
+      the <strong>value</strong> attribute.
       <input type="hidden" value="foundations" />
     </div>
 
     <div class="prompt --5">
       <!-- find a CSS property -->
       5. The fifth secret will be in the Styles tab. First,
-      select the <em>h1</em> element - it's the heading of the page. The <em>Styles</em> section of the developer tools panel shows the CSS properties and values for this element.
-      The secret is the value for the <em>content</em> property for the <em>h1</em>. 
+      select the <strong>h1</strong> element - it's the heading of the page. The
+      <strong>Styles</strong> section of the developer tools panel shows the CSS properties and values for this element.
+      The secret is the value for the <strong>content</strong> property for the
+      <strong>h1</strong>. 
     </div>
 
     <div class="prompt --6">

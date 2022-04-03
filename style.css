@@ -8,6 +8,19 @@
   Our CSS
  */
 
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('fonts/FiraMono-Regular.woff2') format('woff2');
+  font-display: optional;
+}
+
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('fonts/FiraMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: optional;
+}
+
 /* variables */
 :root {
   --spacing: 2rem;
