@@ -1,3 +1,18 @@
+// tour
+let starttour = document.querySelector('#start-tour');
+starttour.addEventListener('click', function (e) {
+  e.preventDefault();
+  let tour = document.querySelector('.tour');
+  tour.style.display = "block";
+});
+// instructions
+let showinstructions = document.querySelector('#show-instructions');
+showinstructions.addEventListener('click', function (e) {
+  e.preventDefault();
+  let instructions = document.querySelector('.instructions');
+  instructions.style.display = "block";
+});
+
 // start
 let startbutton = document.querySelector('.start button');
 let checker = document.querySelector(".checker");

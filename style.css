@@ -26,10 +26,10 @@
   --spacing: 2rem;
   --font-body: 'Fira Mono', monospace;
   --font-h1: 'Fira Mono', monospace;
+  --highlight: #FFC804;
   --text-emphasis-color: #4522A9;
   --body-text: #262626;
   --bg-color: #F6F6F6;
-  --highlight: #FFC804;
 }
 
 body {
@@ -83,12 +83,17 @@ h1 {
   margin: 4px;
 }
 
+.tour,
+.instructions {
+  display: none;
+}
+
 .prompt {
   margin: 0 0 var(--spacing) 0;
   display: none;
 }
 
-img {
+img.offscreen {
   position: relative;
   left: -100vw;
   height: 200px;

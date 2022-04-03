@@ -11,35 +11,82 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- font -->
-    <link rel="preload" as="font" href="fonts/FiraMono-Regular.woff2"
-    type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" as="font" href="fonts/FiraMono-Bold.woff2"
-    type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="fonts/FiraMono-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="fonts/FiraMono-Bold.woff2" type="font/woff2" crossorigin="anonymous">
     <!-- css -->
     <link href="style.css" rel="stylesheet" />
 
   </head>
   <body>
-    <!-- This is the h1! Click it in the Element panel -->
+    <!-- This is the h1! Click it in the Element panel. -->
     <h1>DevTools Scavenger Hunt</h1>
-    <div class="instructions">
-      <h2>Instructions</h2>
+    <div class="introduction">
+      <h2>Introduction</h2>
+      <p>
+      The DevTools are like a Detective's magnifying glass, notebook, and
+      recorder all in one. Web Developers use the DevTools every day to look
+      'under the hood' of a webpage, see what's going on, and make experimental
+      changes.
+      </p>
+      <p>
+      In this challenge, you'll use the DevTools to find messages hidden in the
+      HTML and CSS of this page.
+      </p>
+    </div>
+    <div class="devtools">
+      <h2>The DevTools</h2>
       <div><p>This page contains hidden messages. Follow the clues to put the pieces
         together.</p>
-        <p> For each prompt:</p>
+        <p>You'll need to use the <strong>developer tools</strong> to find each
+        message.</p>
+        <p>
+        Open the developer tools by right clicking anywhere on the page and selecting 'inspect' from the menu. You should see a panel open at the bottom or side of the page.</p>
+        <p>When you have the Developer Tools open, you'll see a ton of buttons
+        and information.</p>
+        <p>
+        <a href="#" id="start-tour">
+          The DevTools are open, let's take a tour.</a>
+
+        <div class="tour">
+          <p>The <strong>Elements panel</strong> shows the HTML elements that make
+          up the page. You can see what's inside an element by clicking
+          open the arrow on the left.</p>
+          <img src="./images/elements-panel.png" />
+
+          <p> The <strong>Styles panel</strong> shows the CSS styles for an
+          element. Click on an element in the Elements panel and look in the
+          Styles panel to see all of the styles.</p>
+          <img src="./images/styles-panel.png" />
+
+          <p>The Styles panel has a bonus power: you can click on the value for any
+          property and change it! You can change the color of the text, or the
+          font size, or the background color, or any other CSS property.</p>
+
+          <a id="show-instructions" href="#">Got it. What's next?</a>
+        </div>
+      </div>
+
+      <div class="instructions">
+        <h2>Instructions</h2>
+        <p>
+        You'll use the Elements panel to find HTML elements and inspect their 
+        attributes. You'll use the Styles panel to see
+        CSS properties. By the end of the challenge, you'll make changes to the
+        styles of the page in order to reveal the most deeply hidden messages.
+        </p>
+
+        <p>Click the button below to get started. For each prompt:</p>
         <ol>
-          <li>Read the clue and figure out the answer.</li>
+          <li>Read the clue and use the DevTools to find the answer.</li>
           <li>Type the answer in the box.</li>
           <li>Click "Check" to check your answer and get the next prompt.</li>
         </ol>
         <p>You can check as many times as you want. You'll get feedback on whether your answer was right or wrong.</p>
         <p>After you solve all the challenges, you'll uncover the <strong>final answer.</strong></p>
-        <p>Take that back to the other page and enter it in the form to continue</p>
+        <div class="start">
+          <button>Okay, let's start!</button>
+        </div>
       </div>
-    </div>
-
-    <div class="start">
-      <button>Okay, start!</button>
     </div>
 
     <div class="prompt --1">
@@ -50,9 +97,11 @@
     </div>
 
     <div class="prompt --2">
-      2. To find the second secret message, you'll need to use the <strong>developer tools</strong> to find the title of the page. Open the developer tools by right clicking anywhere on the page and
-      selecting 'inspect' from the menu. You should see a panel open at the bottom or side of the page. In the Elements tab of the panel, click to
-      open the <strong>head</strong> tag, and look for the <strong>title</strong> tag. There, you'll find the secret.
+      2. To find the second secret message, find the page <strong>title</strong>
+      in the Elements panel. The title tag has the secret in it!
+
+      In the Elements tab of the panel, click to open the <strong>head</strong> tag,
+      and look for the <strong>title</strong> tag. The title is inside the head.
     </div>
 
     <div class="prompt --3">
@@ -73,7 +122,7 @@
 
     <div class="prompt --5">
       <!-- find a CSS property -->
-      5. The fifth secret will be in the Styles tab. First,
+      5. The fifth secret will be in the Styles panel. First,
       select the <strong>h1</strong> element - it's the heading of the page. The
       <strong>Styles</strong> section of the developer tools panel shows the CSS properties and values for this element.
       The secret is the value for the <strong>content</strong> property for the
@@ -99,7 +148,7 @@
     <div class="results">
     </div>
 
-    <img src="kibo-scavenger-hunt.svg" alt="image showing a mountain and the text 'the peak'"/>
+    <img class="offscreen" src="kibo-scavenger-hunt.svg" alt="image showing a mountain and the text 'the peak'"/>
 
     <div class="victory">
       <h3>Congratulations!</h3>
@@ -108,6 +157,6 @@
       We hope you had fun solving the mystery!
     </div>
 
-    <script src="index.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
