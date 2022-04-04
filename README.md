@@ -18,22 +18,19 @@ specific challenge feedback:
     and what the Styles tab is
 6. not clear what to change it to
 
-Maybe opening the developer tools in the intro, and then the first one is
-different, ALL use the developer tools
-    - maybe change the name to "Developer Tools Scavenger Hunt"
-    - and make them all use the Tools
+TODO: change the first task to use the developer tools
 
-- The motivation / context is weak
+DONE: The motivation / context is weak
     - Intro could say what you'll learn from the scavenger hunt
     - explain why you're here
     - it's to learn to use the developer tools to inspect and change things on
         a webpage
 
 - feeling stuck feels bad
-    - add 'I'm stuck, give me a hint' button
-    - words of encouragement / congrats on guessing right
+    - TODO: add 'I'm stuck, give me a hint' button
+    - TODO: words of encouragement / congrats on guessing right
     - Keep going, the next one is tricky
-    - Also - connect to the conceptual ideas in the success messages
+    - TODO: connect to the conceptual ideas in the success messages
         - Text Nodes
         - HTML elements and tags
         - HTML attributes
@@ -41,7 +38,7 @@ different, ALL use the developer tools
         - Changing CSS values
         - (some js thing? the console?)
 
-- congrats at the end should scroll into view
+- TODO: congrats at the end should scroll into view
 - additional challenges:
     - maybe: change the bg color of the page and making the background color -
     - TODO Make this number 5, shift the previous ones earlier, but leave number 6 in place
