@@ -43,6 +43,11 @@ DONE: The motivation / context is weak
     - maybe: change the bg color of the page and making the background color -
     - TODO Make this number 5, shift the previous ones earlier, but leave number 6 in place
 
+
+- bug when the devtools have the ‘mobile’ turned on, todo: check whether that’s the default
+- clicking the links to continue isn’t super obvious (maybe buttons would be better? maybe it’s okay? not 100%)
+- it’s still not totally clear what #3 is asking for. Maybe it’ll make sense in the context of the lesson? not sure
+
 ## Secret Message
 
 Final result:

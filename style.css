@@ -76,8 +76,14 @@ h1 {
 .results {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin-bottom: var(--spacing);
-  height: 4em;
+  margin-top: var(--spacing);
+  min-height: 4em;
+}
+
+.feedback {
+  text-align: center;
 }
 
 .checker > * {

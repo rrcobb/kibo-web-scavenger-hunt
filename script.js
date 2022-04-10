@@ -1,17 +1,13 @@
-// tour
-let starttour = document.querySelector('#start-tour');
-starttour.addEventListener('click', function (e) {
-  e.preventDefault();
-  let tour = document.querySelector('.tour');
-  tour.style.display = "block";
-});
-// instructions
-let showinstructions = document.querySelector('#show-instructions');
-showinstructions.addEventListener('click', function (e) {
-  e.preventDefault();
-  let instructions = document.querySelector('.instructions');
-  instructions.style.display = "block";
-});
+function addReveal(revealerSelector, revealedSelector) {
+  let revealer = document.querySelector(revealerSelector);
+  revealer.addEventListener('click', function (e) {
+    e.preventDefault();
+    let revealed = document.querySelector(revealedSelector);
+    revealed.style.display = "block";
+  });
+}
+addReveal('#start-tour', '.tour');
+addReveal('#show-instructions', '.instructions');
 
 // start
 let startbutton = document.querySelector('.start button');
@@ -33,7 +29,7 @@ startbutton.addEventListener('click', function () {
 
 
 let answers = {
-  1: "climb kibo",
+  1: "Climb Kibo",
   2: "you must build",
   3: "strong",
   4: "foundations",
@@ -43,12 +39,11 @@ let answers = {
 
 
 // TODO:
-// - show attempts below the checker
-// - reveal hint after several missed attempts
+// - hints
 
 function checkAnswer() {
   let attempt = input.value.toLowerCase();
-  let answer = answers[currentPrompt];
+  let answer = answers[currentPrompt].toLowerCase();
   if (attempt == answer) { 
     showNextPrompt();
     input.blur();
@@ -56,22 +51,25 @@ function checkAnswer() {
     input.focus();
     showFeedback(attempt, "Correct!", true);
   } else {
-    showFeedback(attempt, "That's not the answer. Keep trying.", false);
+    showFeedback(attempt, "Keep trying", false);
   }
 }
 
 function showFeedback(attempt, message, correct) {
   let feedback = document.createElement('div');
   feedback.className = "feedback"
-  feedback.innerText = message;
+  feedback.innerText = `${attempt} `;
+  let feedbackSpan = document.createElement('span');
+  feedbackSpan.innerText = message;
   if (correct) {
-    feedback.style = "color: mediumseagreen"
+    feedbackSpan.style = "color: mediumseagreen"
   } else {
-    feedback.style = "color: lightcoral";
+    feedbackSpan.style = "color: lightcoral";
   }
+  feedback.appendChild(feedbackSpan);
   let results = document.querySelector('.results');
-  results.querySelectorAll(".feedback").forEach(old => results.removeChild(old));
-  results.appendChild(feedback)
+  // results.querySelectorAll(".feedback").forEach(old => results.removeChild(old));
+  results.prepend(feedback)
 }
 
 let currentPrompt = 0;
