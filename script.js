@@ -37,7 +37,6 @@ let answers = {
   6: "the peak",
 }
 
-
 // TODO:
 // - hints
 
