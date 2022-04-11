@@ -5,17 +5,16 @@
       DevTools Scavenger Hunt |
       The secret is: "Climb Kibo"
     </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- todo: meta og/share -->
     <meta name="description" content="DevTools Scavenger Hunt | Use the built-in
                 browser devtools to find secret messages hidden on the page." />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- font -->
     <link rel="preload" as="font" href="fonts/FiraMono-Regular.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="fonts/FiraMono-Bold.woff2" type="font/woff2" crossorigin="anonymous">
     <!-- css -->
     <link href="style.css" rel="stylesheet" />
-
   </head>
   <body>
     <!-- This is the h1! Click it in the Element panel. -->
@@ -32,51 +31,46 @@
       In this challenge, you'll use the DevTools to find messages hidden in the
       HTML and CSS of this page.
       </p>
+      <p style="font-size: 36px; text-align: center">🕵️</p>
     </div>
     <div class="devtools">
       <h2>The DevTools</h2>
-      <div><p>This page contains hidden messages. Follow the clues to put the pieces
-        together.</p>
-        <p>You'll need to use the developer tools to find each message.</p>
+      <div>
+        <p>You'll need to use the developer tools to find the messages hidden on
+        this page.</p>
         <p> <strong>Open the developer tools</strong> by right clicking anywhere on the page and selecting 'Inspect' from the menu. You should see a panel open at the bottom or side of the page.</p>
         <p>
-        <a href="#" id="start-tour">
-          Great! You got the DevTools open, now let's take a tour.</a>
-
-        <div class="tour">
-          <p>The <strong>Elements panel</strong> shows the HTML elements that make
-          up the page. You can see what's inside an element by clicking
-          open the arrow on the left.</p>
-          <img src="./images/elements-panel.png" />
-
-          <p> The <strong>Styles panel</strong> shows the CSS styles for an
-          element. Click on an element in the Elements panel and look in the
-          Styles panel to see all of the styles.</p>
-          <img src="./images/styles-panel.png" />
-
-          <p>The Styles panel has a bonus power: you can click on the value for any
-          property and change it! You can change the color of the text, or the
-          font size, or the background color, or any other CSS property.</p>
-
-          <p><strong>Tip</strong>: You can drag the panels to resize them.
-          There's also a ton more panels that you can look at if you want to
-          explore (check out what happens when you open the Network panel, then
-          reload the page!)</p>
-
-          <a id="show-instructions" href="#">Got it. What's next?</a>
+        <div id="start-tour">
+          <p>Great, you got the DevTools open! 🎉</p>
+          <a href="#">Let's take a tour. Click to continue.</a>
         </div>
       </div>
     </div>
 
+    <div class="tour">
+      <h2>Tour of the devtools</h2>
+      <p>The <strong>Elements panel</strong> shows the HTML elements that make
+      up the page. You can see what's inside an element by clicking
+      open the arrow on the left.</p>
+      <img src="./images/elements-panel.png" />
+
+      <p> The <strong>Styles panel</strong> shows the CSS styles for an
+      element. Click on an element in the Elements panel and look in the
+      Styles panel to see all of the styles.</p>
+      <img src="./images/styles-panel.png" />
+
+      <p>The Styles panel has a bonus power: you can click on the value for any
+      property and change it! You can change the color of the text, or the
+      font size, or the background color, or any other CSS property.</p>
+
+      <p><strong>Tip</strong>: You can drag the panels to resize them. There's
+      also a ton more panels to explore later.</p>
+
+      <a id="show-instructions" href="#">Got it. What's next?</a>
+    </div>
+
     <div class="instructions">
       <h2>Instructions</h2>
-      <p>
-      You'll use the Elements panel to find HTML elements and inspect their 
-      attributes. You'll use the Styles panel to see
-      CSS properties. By the end of the challenge, you'll make changes to the
-      styles of the page in order to reveal the most deeply hidden messages.
-      </p>
-
       <p>Click the button below to get started. For each prompt:</p>
       <ol>
         <li>Read the clue and use the DevTools to find the answer.</li>
@@ -94,27 +88,26 @@
       <h3>Challenge 1</h3>
       <p>The first secret message is in the page <strong>title</strong> in the
       Elements panel. The title tag has the secret in it!</p>
-      <p>In the Elements tab of the panel, click to open the <strong>head</strong> tag, and look for the <strong>title</strong> tag. The title is inside the head.</p>
+      <p>In the Elements tab of the panel, click to open the
+      <strong>head</strong> tag, and look for the <strong>title</strong> tag.
+      The title is inside the head, and the secret is inside the title.</p>
 
-      <p>Type it into the box below.</p>
+      <p>Type the secret into the box below.</p>
     </div>
 
     <div class="prompt --2">
       <h3>Challenge 2</h3>
-      <p>The second secret is the <strong>value</strong> of an input element hidden inside this
-      very prompt. Click to inspect an element in this paragraph, open up the
-      elements and look nearby for an <strong>input</strong> element. 
-      The <strong>value</strong> attribute of the input element is the second 
-      secret.</p>
-      <input type="hidden" value="secret: 'you must build'" />
+      <p>The second secret is hidden in an input element inside this very
+      prompt. Click to inspect an element in this paragraph, and look nearby for an <strong>input</strong> element. 
+      The <strong>value</strong> attribute of the input element is the second secret.</p>
+      <input type="hidden" value="the secret is: 'you must build'" />
     </div>
 
     <div class="prompt --3">
       <h3>Challenge 3</h3>
       <p> The third secret is the name of <strong>the HTML tag around this text</strong>.
       Right click on the bold text and click 'Inspect'. The text is inside of a 
-      <strong>tag</strong>. The tag has a name in angle brackets, like '&lt;
-      name &gt;'. That name is the third secret.</p>
+      <strong>tag</strong>. The tag has a name in angle brackets, like '&lt;name&gt;'. That name is the third secret.</p>
     </div>
 
     <div class="prompt --4">
@@ -131,9 +124,10 @@
     <div class="prompt --5">
       <h3>Challenge 5</h3>
       <p>The fifth secret is hidden in plain sight.</p>
-      <p>To reveal it, click to select the the &lt;div&gt; for prompt 5. In the
-      styles tab, change the <code>background-color</code> to '#555'.</p>
-      <p>That will reveal the message hidden here:</p>
+      <p>To reveal it, click to select the the &lt;div&gt; for this prompt,
+      Challenge 5. In the styles tab, change the <code>background-color</code>
+      from '#F6F6F6' to '#555'.</p>
+      <p>That will reveal the message hidden below:</p>
       <span class="bg-hidden">the secret is: 'to reach'</span>
     </div>
 
@@ -180,8 +174,8 @@
           document.querySelector("#start-tour").style.display = "inline-block";
         }
 
-        console.log('Is DevTools open:', event.detail.isOpen);
-        console.log('DevTools orientation:', event.detail.orientation);
+        // console.log('Is DevTools open:', event.detail.isOpen);
+        // console.log('DevTools orientation:', event.detail.orientation);
       });
     </script>
   </body>

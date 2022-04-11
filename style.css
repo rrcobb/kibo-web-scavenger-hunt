@@ -96,13 +96,10 @@ h1 {
 
 .tour,
 .instructions,
+.prompt,
 #start-tour {
   display: none;
-}
-
-.prompt {
-  margin: 0 0 var(--spacing) 0;
-  display: none;
+  margin-bottom: var(--spacing);
 }
 
 .prompt.--5 {
@@ -114,8 +111,8 @@ h1 {
 }
 
 img.offscreen {
-  position: relative;
   left: -100vw;
+  position: relative;
   height: 200px;
 }
 
