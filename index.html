@@ -3,9 +3,9 @@
   <head>
     <title>
       DevTools Scavenger Hunt |
-      The secret is: "you must build"
+      The secret is: "Climb Kibo"
     </title>
-    <!-- todo: , meta og/share -->
+    <!-- todo: meta og/share -->
     <meta name="description" content="DevTools Scavenger Hunt | Use the built-in
                 browser devtools to find secret messages hidden on the page." />
 
@@ -92,58 +92,57 @@
 
     <div class="prompt --1">
       <h3>Challenge 1</h3>
-      <p>The first secret message is: <strong
-                                             class="secret">Climb Kibo</strong>. Type it into the box below.</p>
-      <p><small>This one's pretty easy. It's supposed to get you warmed up for
-        solving the next few challenges.</small></p>
+      <p>The first secret message is in the page <strong>title</strong> in the
+      Elements panel. The title tag has the secret in it!</p>
+      <p>In the Elements tab of the panel, click to open the <strong>head</strong> tag, and look for the <strong>title</strong> tag. The title is inside the head.</p>
+
+      <p>Type it into the box below.</p>
     </div>
 
     <div class="prompt --2">
       <h3>Challenge 2</h3>
-      <p>To find the second secret message, find the page <strong>title</strong>
-      in the Elements panel. The title tag has the secret in it!
-
-      In the Elements tab of the panel, click to open the <strong>head</strong> tag,
-      and look for the <strong>title</strong> tag. The title is inside the
-      head.</p>
+      <p>The second secret is the <strong>value</strong> of an input element hidden inside this
+      very prompt. Click to inspect an element in this paragraph, open up the
+      elements and look nearby for an <strong>input</strong> element. 
+      The <strong>value</strong> attribute of the input element is the second 
+      secret.</p>
+      <input type="hidden" value="secret: 'you must build'" />
     </div>
 
     <div class="prompt --3">
       <h3>Challenge 3</h3>
-      <p> The third secret is the name of <strong>this HTML element</strong>.
-      Right click on the bold text and click 'Inspect'. The text 'this HTML
-      element' is inside of a <strong>tag</strong>. The tag has angle brackets (&lt; and
-      &gt;) and a name. That name is the third secret.</p>
+      <p> The third secret is the name of <strong>the HTML tag around this text</strong>.
+      Right click on the bold text and click 'Inspect'. The text is inside of a 
+      <strong>tag</strong>. The tag has a name in angle brackets, like '&lt;
+      name &gt;'. That name is the third secret.</p>
     </div>
 
     <div class="prompt --4">
       <h3>Challenge 4</h3>
-      <p>The fourth secret is the <strong>value</strong> of an input element hidden inside this
-      very prompt. Click to inspect an element in this paragraph, open up the
-      elements and look nearby for an <strong>input</strong> element. 
-      The <strong>value</strong> attribute of the input element is the fourth
-      secret.</p>
-      <input type="hidden" value="foundations" />
-    </div>
-
-    <div class="prompt --5">
-      <h3>Challenge 5</h3>
-      <p>The fifth secret is hidden in the Styles panel. First,
+      <p>The fourth secret is hidden in the Styles panel. First,
       select the <strong>h1</strong> element - it's the heading of the page, at
       the top of the &lt;body&gt;, and inside it says 'DevTools Scavenger Hunt'.
       Click that element in the Elements panel so that the
       <strong>Styles</strong> panel shows all the CSS properties and values.
       The secret is in the <strong>content</strong> property. 
-        </p>
+      </p>
+    </div>
+
+    <div class="prompt --5">
+      <h3>Challenge 5</h3>
+      <p>The fifth secret is hidden in plain sight.</p>
+      <p>To reveal it, click to select the the &lt;div&gt; for prompt 5. In the
+      styles tab, change the <code>background-color</code> to '#555'.</p>
+      <p>That will reveal the message hidden here:</p>
+      <span class="bg-hidden">the secret is: 'to reach'</span>
     </div>
 
     <div class="prompt --6">
       <h3>Challenge 6</h3>
-      <p>To find the last value, you'll have to change a style using the developer tools. There's an image hidden off screen that has the secret.</p>
+      <p>To find the last value, you'll have to change another style using the developer tools. There's an image hidden off screen that has the secret.</p>
       <p>Find the <strong>&lt;img&gt;</strong> tag by looking near this
       prompt in the Elements panel.
       Click on the <strong>&lt;img&gt;</strong> in the Elements tab to select it. </p>
-
       <p> In the Styles tab, change the value for the 'left' property to move
       the element onto the screen. You can try different values, there's lots of
       ones that will work.

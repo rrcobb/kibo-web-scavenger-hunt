@@ -7,6 +7,9 @@ Using the chrome inspector + dev console to find some secret messages
 
 ## Feedback / TODO
 
+TODO: remind that mobile will not work
+MAYBE link to repl version where mobile will work?
+
 specific challenge feedback:
 
 1. kinda boring, did not learn anything
@@ -19,12 +22,6 @@ specific challenge feedback:
 6. not clear what to change it to
 
 TODO: change the first task to use the developer tools
-
-DONE: The motivation / context is weak
-    - Intro could say what you'll learn from the scavenger hunt
-    - explain why you're here
-    - it's to learn to use the developer tools to inspect and change things on
-        a webpage
 
 - feeling stuck feels bad
     - TODO: add 'I'm stuck, give me a hint' button
@@ -40,10 +37,10 @@ DONE: The motivation / context is weak
 
 - TODO: congrats at the end should scroll into view
 - additional challenges:
-    - maybe: change the bg color of the page and making the background color -
+    - maybe: change the bg color of the page, making a message visible
     - TODO Make this number 5, shift the previous ones earlier, but leave number 6 in place
 
-
+TODO: bugfixes
 - bug when the devtools have the ‘mobile’ turned on, todo: check whether that’s the default
 - clicking the links to continue isn’t super obvious (maybe buttons would be better? maybe it’s okay? not 100%)
 - it’s still not totally clear what #3 is asking for. Maybe it’ll make sense in the context of the lesson? not sure
@@ -51,8 +48,8 @@ DONE: The motivation / context is weak
 ## Secret Message
 
 Final result:
-- climb kibo
-- You must build
+- Climb Kibo
+- you must build
 - strong
 - foundations
 - to reach

@@ -52,7 +52,7 @@ p {
 }
 
 h1 {
-  content: "the secret is 'to reach'";
+  content: "the secret is 'foundations'";
   margin: var(--spacing) 0;
   font-family: var(--font-h1);
 }
@@ -103,6 +103,14 @@ h1 {
 .prompt {
   margin: 0 0 var(--spacing) 0;
   display: none;
+}
+
+.prompt.--5 {
+  background-color: #F6F6F6;
+}
+
+.bg-hidden {
+  color: var(--bg-color);
 }
 
 img.offscreen {
