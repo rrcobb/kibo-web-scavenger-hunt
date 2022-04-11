@@ -7,13 +7,17 @@ Using the chrome inspector + dev console to find some secret messages
 
 ## Feedback / TODO
 
-TODO: remind that mobile will not work
+TODO:
+- remind that mobile will not work
+- Summary / Details for Help Panel
+    - Link to DevTools Video
+    - Link to Solution Video
+    - Devtools is open, what do I do next?
+    - I'm stuck, give me a hint!
+
 MAYBE link to repl version where mobile will work?
 
-specific challenge feedback:
-
-TODO: change the first task to use the developer tools
-
+- TODO: congrats at the end should scroll into view
 - feeling stuck feels bad
     - TODO: add 'I'm stuck, give me a hint' button
     - TODO: words of encouragement / congrats on guessing right
@@ -26,7 +30,6 @@ TODO: change the first task to use the developer tools
         - Changing CSS values
         - (some js thing? the console?)
 
-- TODO: congrats at the end should scroll into view
 
 TODO: bugfixes
 - bug when the devtools have the ‘mobile’ turned on, todo: check whether that’s the default

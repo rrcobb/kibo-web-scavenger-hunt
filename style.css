@@ -90,6 +90,16 @@ h1 {
   margin: 4px;
 }
 
+.help summary {
+  color: orangered;
+  cursor: pointer;
+  margin: calc(0.25 * var(--spacing)) 0;
+}
+
+.help-items li {
+  list-style: none;
+}
+
 .spacer {
   height: 4em;
 }

@@ -7,6 +7,7 @@ function addReveal(revealerSelector, revealedSelector) {
   });
 }
 addReveal('#start-tour', '.tour');
+addReveal('.backup-tour', '.tour');
 addReveal('#show-instructions', '.instructions');
 
 // start
