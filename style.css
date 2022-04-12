@@ -61,6 +61,11 @@ h1 {
   margin: var(--spacing) 0;
 }
 
+.detective {
+  font-size: 36px;
+  text-align: center;
+}
+
 .start {
   display: flex;
   justify-content: center;
@@ -118,6 +123,11 @@ h1 {
 
 .bg-hidden {
   color: var(--bg-color);
+}
+
+img {
+  border: 2px solid cornflowerblue;
+  border-radius: 2px;
 }
 
 img.offscreen {
