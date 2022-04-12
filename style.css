@@ -28,18 +28,18 @@
   --font-h1: 'Fira Mono', monospace;
   --highlight: #FFC804;
   --text-emphasis-color: #4522A9;
-  --body-text: #262626;
+  
   --bg-color: #F6F6F6;
 }
 
 body {
+  color: #262626;
   margin: auto;
   padding: 0.5em;
   max-width: 600px;
   font-family: var(--font-body);
   font-size: 16px;
   background-color: var(--bg-color);
-  color: var(--body-text);
 }
 
 strong, em {
@@ -52,7 +52,7 @@ p {
 }
 
 h1 {
-  content: "the secret is 'foundations'";
+  content: "the fourth secret is: 'foundations'";
   margin: var(--spacing) 0;
   font-family: var(--font-h1);
 }
@@ -73,7 +73,7 @@ h1 {
 
 .checker {
   margin: var(--spacing) 0 0 0;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -96,7 +96,7 @@ h1 {
 }
 
 .help summary {
-  color: orangered;
+  color: mediumvioletred;
   cursor: pointer;
   margin: calc(0.25 * var(--spacing)) 0;
 }
@@ -111,13 +111,12 @@ h1 {
 
 .tour,
 .instructions,
-.prompt,
+.challenge,
 #start-tour {
-  display: none;
   margin-bottom: var(--spacing);
 }
 
-.prompt.--5 {
+.challenge.--5 {
   background-color: #F6F6F6;
 }
 
@@ -137,10 +136,14 @@ img.offscreen {
 }
 
 .victory {
-  display: none;
+  display: flex;
   margin: var(--spacing);
 }
 
 .message {
   margin: var(--spacing);
+}
+
+.hidden {
+  display: none;
 }

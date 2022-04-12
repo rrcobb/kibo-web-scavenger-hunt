@@ -4,7 +4,7 @@
   <head>
     <title>
       DevTools Scavenger Hunt |
-      The secret is: "Climb Kibo"
+      The first secret is: "Climb Kibo"
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,145 +39,172 @@
       <div>
         <p>You'll need to use the developer tools to find the messages hidden on
         this page.</p>
-        <p> <strong>Open the developer tools</strong> by right clicking anywhere on the page (or
-        pressing the control key while you click) and selecting 'Inspect' from the menu. You should see a panel open at the bottom or side of the page.</p>
+        <p> <strong>To open the developer tools:</strong> right click anywhere
+        on the page and select 'Inspect' from the menu. You should see a panel
+        open at the bottom or side of the page.</p>
+        <p>(If you don't have a 'right
+        click', try holding control and clicking to bring up the menu before
+        clicking 'Inspect').</p>
         <p>
-        <div id="start-tour">
-          <p>Great, you got the DevTools open! 🎉</p>
-          <a href="#">Let's take a tour. Click to continue.</a>
-        </div>
       </div>
     </div>
 
-    <div class="tour">
+    <div id="start-tour" class="hidden">
+      <h2>Nice!</h2>
+      <p>Great, you got the DevTools open! 🎉</p>
+      <a href="#">Let's take a tour. Click to continue.</a>
+    </div>
+
+    <div class="tour hidden">
       <h2>Tour of the devtools</h2>
       <p>The <strong>Elements panel</strong> shows the HTML elements that make
-      up the page. You can see what's inside an element by clicking
-      open the arrow on the left.</p>
+      up the page. You can open an element to see what's inside by clicking
+      the arrow on the left. Try it in the Elements panel!</p>
       <img src="./images/elements-panel.png" />
 
       <p> The <strong>Styles panel</strong> shows the CSS styles for an
-      element. Click on an element in the Elements panel to see its styles in the Styles panel.</p>
+      element. Click on an element in the Elements panel to see its styles in
+      the Styles panel. (In this image, the &lt;body&gt; element is selected.)</p>
       <img src="./images/styles-panel.png" />
 
-      <p>The Styles panel has a bonus power: you can click on the value for any
-      property and change it! You can change the color of the text, or the
-      font size, or the background color, or any other CSS property.</p>
-
-      <p><strong>Tip</strong>: You can drag the panels to resize them. There's
-      also a ton more panels to explore later.</p>
+      <p>The Styles panel has a bonus power: you can change the text color, the
+      font size, the background color, or any other CSS property!</p>
+      <p>Try changing the 'color' of the body text from '#262626' to '#888' to see! You can change it back if that makes it hard to read.</p>
+      <p>One of the great things about the DevTools is the freedom to
+      experiment. Nothing you change will break the site permanently. 
+      You can always refresh the page to get back to how things started</p>
 
       <a id="show-instructions" href="#">Got it. What's next?</a>
     </div>
 
-    <div class="instructions">
+    <div class="instructions hidden">
       <h2>Instructions</h2>
-      <p>Click the button below to get started. For each prompt:</p>
+      <p>Click the button below to get started. For each challenge:</p>
       <ol>
         <li>Read the clue and use the DevTools to find the answer.</li>
         <li>Type the answer in the box.</li>
-        <li>Click "Check" to check your answer and get the next prompt.</li>
+        <li>Click "Check" to check your answer and get the next challenge.</li>
       </ol>
-      <p>You can check as many times as you want. You'll get feedback on whether your answer was right or wrong.</p>
-      <p>After you solve all the challenges, you'll uncover the <strong>final answer.</strong></p>
+      <p>You can check as many times as you want.</p>
+      <p>If you need help, click to open the Help section at the bottom of the
+      page, and see if something applies to you.</p>
       <div class="start">
         <button>Okay, let's start!</button>
       </div>
     </div>
 
-    <div class="prompt --1">
+    <div class="challenge --1 hidden">
       <h3>Challenge 1</h3>
       <p>The first secret message is in Elements panel in the &lt;title&gt;
       inside the &lt;head&gt;. The &lt;title&gt; tag has the secret in it!</p>
-      <p>In the Elements tab of the panel, click to open the
+      <p>In the Elements panel, click to open the
       &lt;head&gt; tag, and look for the &lt;title&gt; tag inside.</p>
 
       <p>Type the secret into the box below.</p>
     </div>
 
-    <div class="prompt --2">
+    <div class="challenge --2 hidden">
       <h3>Challenge 2</h3>
-      <p>The second secret is hidden in an input element inside this very prompt.</p>
-      <p>Click to inspect an element in this paragraph, and look nearby for an
-      &lt;input&gt; element.</p> 
+      <p>The second secret is hidden in an &lt;input&gt; element in the
+      challenge 2 &lt;div&gt;.</p>
+      <p>Inspect an element within Challenge 2, like this sentence. Find this
+      section in the Elements panel, and expand it using the arrow on the left.</p>
+      <p>Look nearby for an &lt;input&gt; element.</p> 
       <p>The <strong>value</strong> attribute of the input element contains the second secret.</p>
-      <input type="hidden" value="the secret is: 'you must build'" />
+      <input type="hidden" value="the second secret is: 'you must build'" />
     </div>
 
-    <div class="prompt --3">
+    <div class="challenge --3 hidden">
       <h3>Challenge 3</h3>
       <p> The third secret is the name of <strong>the HTML tag for this bold
         text</strong>.</p>
-      <p>Right click (or hold the control key and click) on the bold text and click 'Inspect'. The words are inside of a 
-      <strong>tag</strong>, like '&lt;name&gt;'. The tag name is the third secret.</p>
+      <p>Right click (or hold the control key and click) on the bold text and
+      click 'Inspect'.</p>
+      <p>The third secret is the word inside the &lt; and &gt; for the tag
+      with the bold text.</p>
     </div>
 
-    <div class="prompt --4">
+    <div class="challenge --4 hidden">
       <h3>Challenge 4</h3>
       <p>The fourth secret is hidden in the Styles panel. First,
-      find the <strong>h1</strong> element - it's the heading of the page, at
+      find the <strong>h1</strong> element - it's the heading of this page, at
       the top of the &lt;body&gt;, and inside it says 'DevTools Scavenger Hunt'.
-      (hint: you can scroll to the top of the page, and Inspect the title
-      there).</p>
-      <p>Click that element in the Elements panel so that the
-      <strong>Styles</strong> panel shows its CSS properties and values.
-      The secret is the <strong>content</strong> property's value. 
+      </p><p>Hint: you can scroll to the top of the page, and Inspect the title
+      there.</p>
+      <p>Click the h1 element in the Elements panel so that the
+      <strong>Styles</strong> panel shows its styles.
+      The fourth secret is in the <strong>content</strong> property. 
       </p>
     </div>
 
-    <div class="prompt --5">
+    <div class="challenge --5 hidden">
       <h3>Challenge 5</h3>
       <p>The fifth secret is hidden in plain sight.</p>
-      <p>To reveal it, click to select the &lt;div&gt; for this prompt,
-      Challenge 5. In the styles tab, change the <code>background-color</code>
+      <p>In Elements, click to select the &lt;div&gt; for challenge 5.
+      In the <strong>Styles</strong> panel, change the <code>background-color</code>
       from '#F6F6F6' to '#555'.</p>
       <p>That will reveal the message hidden below:</p>
-      <span class="bg-hidden">the secret is: 'to reach'</span>
+      <span class="bg-hidden">the fifth secret is: 'to reach'</span>
     </div>
 
-    <div class="prompt --6">
+    <div class="challenge --6 hidden">
       <h3>Challenge 6</h3>
-      <p>To find the last value, you'll have to change another style using the developer tools. There's an image hidden off screen that has the secret.</p>
-      <p>Find the <strong>&lt;img&gt;</strong> tag by looking near this
-      prompt in the Elements panel.
-      Click on the <strong>&lt;img&gt;</strong> in the Elements tab to select it. </p>
-      <p> In the Styles tab, change the value for the 'left' property to move
-      the element onto the screen. You can try different values, there's lots of
-      ones that will work.
-      </p>
+      <p>To find the sixth and last secret, you'll have to change another style.
+      There's an image hidden off-screen that has the secret.</p>
+      <p>Find the <strong>&lt;img&gt;</strong> tag in the Challenge 6 
+      &lt;div&gt; in the Elements panel.</p>
+      <p>Click on the <strong>&lt;img&gt;</strong> in the Elements panel to select it.</p>
+      <p>In the Styles panel, change the value for 'left' to move
+      the element onto the screen. You can try different values, or delete the 'left' value, that works too!</p>
       <img class="offscreen" src="kibo-scavenger-hunt.svg" alt="image showing a mountain and the text 'the peak'"/>
     </div>
 
+    <div class="checker hidden">
+      <label for="secret">Secret: </label>
+      <input type="text" id="secret"></input>
+      <button class="check">Check</button>
+    </div>
+
+    <div class="results hidden">
+    </div>
+
     <details class="help">
-      <summary>Help!</summary>
-      Remember to read the instructions carefully. It may help to click 'Inspect' on an element again to focus it in the
-      DevTools. If you've read the instructions and you're still stuck, try one
-      of these options:
+      <summary>Click for help, click again to close.</summary>
+      If you've read the instructions and you're still stuck, one of
+      these items might help:
       <ul class="help-items">
         <li>
           <details>
             <summary>The Devtools won't open.</summary>
             <p>First, try again to right click (or, hold control and click), and then select 'Inspect' from the menu.</p>
-            <p>If that doesn't work, you can open the chrome menu at the top
+            <p>If that doesn't work, you can open the browser menu at the top
             right, then click 'More Tools &gt; Developer Tools'.</p>
             <p>
-            You can also read more at <a href="https://developer.chrome.com/docs/devtools/open/#chrome">
-            this link</a> , or watch <a href="https://www.loom.com/share/0e80e8d156ae4cb6a417d7591f88e04b">
-            this video</a>.</p> 
+              You can also read more at <a href="https://developer.chrome.com/docs/devtools/open/#chrome">
+              this link</a> , or watch <a href="https://www.loom.com/share/0e80e8d156ae4cb6a417d7591f88e04b">
+              this video</a>.
+            </p> 
+            <p>
+              If you're using another browser, and right-click to inspect
+              doesn't work for you, try 
+              <a href="https://elfsight.com/blog/2020/07/how-to-work-with-developer-console/">
+                This guide
+              </a>
+            </p>
           </details>
         </li>
         <li>
           <details>
             <summary>I've opened the Devtools. What's next?</summary>
-            <p>There should be a blue link that says</p>
+            <p>There is supposed to be a blue link like the one below, but
+            sometimes it doesn't show up.</p>
             <div class="backup-tour"> 
               <a href="#">Let's take a tour. Click to continue.</a>
             </div>
-            <p>Click it (or this one if it didn't show up) to continue.</p>
+            <p>Click this one to continue.</p>
             <p>Note: you still need the DevTools in order to solve the
-            challenges!</p>
-        </div>
-
+            challenges! Don't skip opening them!</p>
+            </div>
           </details>
         </li>
         <li>
@@ -191,8 +218,8 @@
         <li>
           <details>
             <summary>I'm stuck on challenge 2. Where's the input element?</summary>
-            <p>The input element is inside the prompt 2 div, </p>
-            <p><code>&lt;div class="prompt --2"&gt;</code></p> 
+            <p>The input element is inside the challenge 2 div, </p>
+            <p><code>&lt;div class="challenge --2"&gt;</code></p> 
             <p>Once you find the &lt;input&gt; element, you'll see the secret
             is in the 'value' attribute. Here's a screenshot: </p>
             <img src="./images/challenge-2.png" />
@@ -222,7 +249,7 @@
           <details>
             <summary>I'm stuck on challenge 5. How do I change the
               background-color?</summary>
-            <p>First, you need to select the &lt;div&gt; for prompt 5. Then, you
+            <p>First, you need to select the &lt;div&gt; for challenge 5. Then, you
             can double-click on the '#F6F6F6', then type '#555'. Don't forget
             the '#'!</p>
             <p>Here's what it should look like:</p>
@@ -234,7 +261,7 @@
             <summary>I'm stuck on challenge 6. How do I move the image?</summary>
             <p>Just like for challenge 5, you have to select an element, then
             change the style. This time, you have to find and select the
-            &lt;img&gt; element in the challenge 6 prompt, and change the left
+            &lt;img&gt; element in the challenge 6 div, and change the left
             property.</p><p>If you don't know what to change the value to, try
             '0'.</p>
             <img src="./images/challenge-6.png" />
@@ -247,46 +274,37 @@
             <p>Don't worry!</p>
             <p>These challenges are tricky. Take a look at this
             <a
-            href="https://www.loom.com/share/6c15b25937af4431b5a5c7ed85ec26ff">solution video</a> for a walkthrough of how to solve it.</p>
+                href="https://www.loom.com/share/6c15b25937af4431b5a5c7ed85ec26ff">solution video</a> for a walkthrough of how to solve it.</p>
           </details>
         </li>
       </ul>
-      </details>
+    </details>
 
 
-      <div class="checker">
-        <label for="secret">Secret: </label>
-        <input type="text" id="secret"></input>
-        <button class="check">Check</button>
-      </div>
+    <div class="victory hidden">
+      <h3>Congratulations!</h3>
+      You did it. Here's the message all together:
+      <div class="message"></div>
+      We hope you had fun solving the mystery!
+    </div>
 
-      <div class="results">
-      </div>
+    <div class="spacer">
+    </div>
 
-      <div class="victory">
-        <h3>Congratulations!</h3>
-        You did it. Here's the message all together:
-        <div class="message"></div>
-        We hope you had fun solving the mystery!
-      </div>
-
-      <div class="spacer">
-      </div>
-
-      <script src="script.js"></script>
-      <script type="module">
-        import devtools from './devtools-detect.js';
+    <script src="script.js"></script>
+    <script type="module">
+      import devtools from './devtools-detect.js';
 
       // Get notified when devtools opened/closed or orientation changes
       window.addEventListener('devtoolschange', event => {
         if (event.detail.isOpen) {
           // start the tour!
-          document.querySelector("#start-tour").style.display = "inline-block";
+          document.querySelector("#start-tour").classList.remove('hidden');
         }
 
         // console.log('Is DevTools open:', event.detail.isOpen);
         // console.log('DevTools orientation:', event.detail.orientation);
       });
-      </script>
+    </script>
   </body>
 </html>

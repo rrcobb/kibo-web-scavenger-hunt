@@ -3,7 +3,7 @@ function addReveal(revealerSelector, revealedSelector) {
   revealer.addEventListener('click', function (e) {
     e.preventDefault();
     let revealed = document.querySelector(revealedSelector);
-    revealed.style.display = "block";
+    revealed.classList.remove('hidden');
   });
 }
 addReveal('#start-tour', '.tour');
@@ -12,12 +12,14 @@ addReveal('#show-instructions', '.instructions');
 
 // start
 let startbutton = document.querySelector('.start button');
-let checker = document.querySelector(".checker");
+let checker = document.querySelector('.checker');
+let results = document.querySelector('.results');
 let input = document.querySelector('.checker input');
 startbutton.addEventListener('click', function () {
-  startbutton.style.display = 'none'
-  showNextPrompt()
-  checker.style.display = 'flex'
+  startbutton.classList.add('hidden');
+  showNextChallenge()
+  checker.classList.remove('hidden');
+  results.classList.remove('hidden');
   input.addEventListener('keydown', function (e) {
     if (e.key == "Enter") {
       checkAnswer()
@@ -43,9 +45,9 @@ let answers = {
 
 function checkAnswer() {
   let attempt = input.value.toLowerCase();
-  let answer = answers[currentPrompt].toLowerCase();
+  let answer = answers[currentChallenge].toLowerCase();
   if (attempt == answer) { 
-    showNextPrompt();
+    showNextChallenge();
     input.blur();
     input.value = ""; // clear
     input.focus();
@@ -67,25 +69,25 @@ function showFeedback(attempt, message, correct) {
     feedbackSpan.style = "color: lightcoral";
   }
   feedback.appendChild(feedbackSpan);
-  let results = document.querySelector('.results');
+  // to clear results
   // results.querySelectorAll(".feedback").forEach(old => results.removeChild(old));
   results.prepend(feedback)
 }
 
-let currentPrompt = 0;
-function showNextPrompt() {
-  if (currentPrompt == 6) {
-    checker.style.display = 'none';
+let currentChallenge = 0;
+function showNextChallenge() {
+  if (currentChallenge == 6) {
+    checker.classList.add('hidden');
     let victory = document.querySelector('.victory');
-    victory.style.display = 'block'; 
+    victory.classList.remove('hidden')
     let message = victory.querySelector('.message');
     for (let key in answers) {
       message.innerHTML += "<p>" + answers[key] + "</p>";
     }
   } else {
-    currentPrompt++;
-    let prompt = document.querySelector(`.prompt.--${currentPrompt}`)
-    prompt.style.display = "block";
+    currentChallenge++;
+    let challenge = document.querySelector(`.challenge.--${currentChallenge}`)
+    challenge.classList.remove('hidden');
   }
 }
 
