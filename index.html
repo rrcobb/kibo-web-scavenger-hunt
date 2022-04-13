@@ -24,7 +24,7 @@
       <h2>Introduction</h2>
       <p>
       The DevTools are like a Detective's magnifying glass, notebook, and
-      recorder all in one. Web Developers use the DevTools every day to look
+      tape recorder all in one. Web Developers use the DevTools every day to look
       'under the hood' of a webpage, see what's going on, and make experimental
       changes.
       </p>
@@ -33,6 +33,12 @@
       HTML and CSS of this page.
       </p>
       <p class="detective">🕵️</p>
+      <div class="mobile">
+        <p>
+        <strong>Note:</strong> this challenge is not designed for mobile devices. 
+        Mobile browsers usually don't have DevTools. Open this page on a laptop 
+        or desktop to solve the challenges.</p>
+      </div>
     </div>
     <div class="devtools">
       <h2>The DevTools</h2>
@@ -42,11 +48,12 @@
         <p> <strong>To open the developer tools:</strong> right click anywhere
         on the page and select 'Inspect' from the menu. You should see a panel
         open at the bottom or side of the page.</p>
-        <p>(If you don't have a 'right
-        click', try holding control and clicking to bring up the menu before
-        clicking 'Inspect').</p>
+        <p>If you don't have a mouse that can 'right click', try holding control 
+        while you click to bring up the menu. Then choose 'Inspect' to open the
+        DevTools.</p>
         <p>
       </div>
+      
     </div>
 
     <div id="start-tour" class="hidden">
@@ -56,7 +63,7 @@
     </div>
 
     <div class="tour hidden">
-      <h2>Tour of the devtools</h2>
+      <h2>Tour of the DevTools</h2>
       <p>The <strong>Elements panel</strong> shows the HTML elements that make
       up the page. You can open an element to see what's inside by clicking
       the arrow on the left. Try it in the Elements panel!</p>
@@ -65,15 +72,18 @@
       <p> The <strong>Styles panel</strong> shows the CSS styles for an
       element. Click on an element in the Elements panel to see its styles in
       the Styles panel. (In this image, the &lt;body&gt; element is selected.)</p>
+
       <img src="./images/styles-panel.png" />
 
-      <p>The Styles panel has a bonus power: you can change the text color, the
-      font size, the background color, or any other CSS property!</p>
-      <p>Try changing the 'color' of the body text from '#262626' to '#888' to see! You can change it back if that makes it hard to read.</p>
-      <p>One of the great things about the DevTools is the freedom to
-      experiment. Nothing you change will break the site permanently. 
-      You can always refresh the page to get back to how things started</p>
+      <p>The Styles panel has another power: you can change the text color, 
+      font size, background color, or any other CSS property!</p>
+      <p>Try changing the 'color' of the body text from '#262626' to '#888'.
+      You can change it back if that makes the text hard to read.</p>
 
+      <p>The DevTools give Web Developers the freedom to experiment.
+      None of the changes you make are permanent, so you can't break
+      anything permanently. You can always refresh the page to get back 
+      to how things started.</p>
       <a id="show-instructions" href="#">Got it. What's next?</a>
     </div>
 
@@ -175,7 +185,7 @@
       <ul class="help-items">
         <li>
           <details>
-            <summary>The Devtools won't open.</summary>
+            <summary>The DevTools won't open.</summary>
             <p>First, try again to right click (or, hold control and click), and then select 'Inspect' from the menu.</p>
             <p>If that doesn't work, you can open the browser menu at the top
             right, then click 'More Tools &gt; Developer Tools'.</p>
@@ -195,7 +205,7 @@
         </li>
         <li>
           <details>
-            <summary>I've opened the Devtools. What's next?</summary>
+            <summary>I've opened the DevTools. What's next?</summary>
             <p>There is supposed to be a blue link like the one below, but
             sometimes it doesn't show up.</p>
             <div class="backup-tour"> 
@@ -295,7 +305,7 @@
     <script type="module">
       import devtools from './devtools-detect.js';
 
-      // Get notified when devtools opened/closed or orientation changes
+      // Get notified when DevTools opened/closed or orientation changes
       window.addEventListener('devtoolschange', event => {
         if (event.detail.isOpen) {
           // start the tour!
