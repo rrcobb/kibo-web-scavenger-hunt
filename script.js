@@ -32,16 +32,13 @@ startbutton.addEventListener('click', function () {
 
 
 let answers = {
-  1: "Climb Kibo",
-  2: "you must build",
+  1: "Rise",
+  2: "to the challenge",
   3: "strong",
-  4: "foundations",
+  4: "together",
   5: "to reach",
   6: "the peak",
 }
-
-// TODO:
-// - hints
 
 function checkAnswer() {
   let attempt = input.value.toLowerCase();
